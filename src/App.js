@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
+import FilmList from './FilmList';
+import FilmDetails from './FilmDetails';
 
 class App extends Component {
   render() {
     return (
       <main className="film-library">
-          <div clasName="film-list">
-            <h1 className="section-title">FILMS</h1>
-          </div>
+          <FilmList/>
 
-          <div className="film-details">
-            <h1 className="section-title">DETAILS</h1>
-          </div>
+          <FilmDetails/>
       </main>
     );
   }
