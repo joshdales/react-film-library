@@ -7,7 +7,16 @@ class FilmList extends Component {
       <section className="film-list">
         <h1 className="section-title">FILMS</h1>
         {this.props.films.map(film =>
-          <h2>{film.title}</h2>
+          <div key={film.id} className="film-row">
+            <figure className="film-poster">
+              <img src={`https://image.tmdb.org/t/p/w780/${film.poster_path}`} alt=""/>
+            </figure>
+
+            <figcaption className="film-summary">
+              <h1>{film.title}</h1>
+              <p>{film.release_date }</p>
+            </figcaption>
+          </div>
 
         )}
 
