@@ -12,11 +12,11 @@ class FilmList extends Component {
       <section className="film-list">
         <h1 className="section-title">FILMS</h1>
         <div className="film-list-filters">
-          <div className="film-list-filter">
+          <div className="film-list-filter" onClick={() => this.handleFaveClick('all')}>
             ALL
             <span className="section-count">{this.props.films.length}</span>
           </div>
-          <div className="film-list-filter">
+          <div className="film-list-filter" onClick={() => this.handleFaveClick('fave')}>
             FAVES
             <span className="section-count">0</span>
           </div>
