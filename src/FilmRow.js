@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
+import FilmPoster from './FilmPoster'
 
 class FilmRow extends Component {
   render() {
-    console.log(this.props.film);
     return (
           <div className="film-row">
-            <figure className="film-poster">
-              <img src={`https://image.tmdb.org/t/p/w780/${this.props.film.poster_path}`} alt=""/>
-            </figure>
+            <FilmPoster film={this.props.film}/>
 
             <figcaption className="film-summary">
               <h1>{this.props.film.title}</h1>
