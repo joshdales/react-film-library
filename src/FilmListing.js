@@ -6,7 +6,7 @@ class FilmList extends Component {
     return (
       <section className="film-list">
         <h1 className="section-title">FILMS</h1>
-        <p></p>
+        <h1>{this.props.films[0].title}</h1>
       </section>
     );
   }
