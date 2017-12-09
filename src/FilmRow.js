@@ -3,9 +3,13 @@ import FilmPoster from './FilmPoster';
 import Fave from './Fave';
 
 class FilmRow extends Component {
+
+  handleDetailsClick(film){
+    console.log(`Fetching details for ${film.title}`);
+  }
   render() {
     return (
-          <div className="film-row">
+          <div className="film-row" onClick={() => this.handleDetailsClick(this.props.film)}>
             <FilmPoster film={this.props.film}/>
 
             <figcaption className="film-summary">
