@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import FilmRow from './FilmRow';
 
 class FilmList extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  handleFaveClick(filter){
+    console.log(`Setting filter to [${filter}]`);
+  }
+  
   render() {
     return (
       <section className="film-list">
