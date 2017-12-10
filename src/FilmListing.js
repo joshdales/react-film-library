@@ -25,7 +25,7 @@ class FilmList extends Component {
             ALL
             <span className="section-count">{this.props.films.length}</span>
           </div>
-          <div className={`film-list-filter ${ filter === 'filter' ? 'is-active' : '' }`} onClick={() => this.handleFilterClick('fave')}>
+          <div className={`film-list-filter ${ filter === 'fave' ? 'is-active' : '' }`} onClick={() => this.handleFilterClick('fave')}>
             FAVES
             <span className="section-count">0</span>
           </div>
