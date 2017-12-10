@@ -17,7 +17,7 @@ class Fave extends Component {
   render() {
     const {isFave} = this.state;
     return (
-      <div className={`film-row-fave ${isFave ? 'add_to_queue': 'remove_from_queue'}`} onClick={this.handleClick}>
+      <div className={`film-row-fave ${isFave ? 'remove_from_queue' : 'add_to_queue'}`} onClick={this.handleClick}>
         <i className="material-icons">add_to_queue</i>
       </div>
     );
