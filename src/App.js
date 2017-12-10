@@ -13,12 +13,12 @@ class App extends Component {
     }
   }
   render() {
-    this.props = TMDB.films
+    const {films, faves, current} = this.state
     return (
       <main className="film-library">
-          <FilmList films={this.props}/>
+          <FilmList films={films} faves={faves}/>
 
-          <FilmDetails/>
+          <FilmDetails film={current}/>
       </main>
     );
   }
