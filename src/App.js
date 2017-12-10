@@ -6,6 +6,11 @@ import TMDB from './TMDB';
 class App extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      films: TMDB.films,
+      faves: [],
+      current: {}
+    }
   }
   render() {
     this.props = TMDB.films
