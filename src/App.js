@@ -35,13 +35,14 @@ class App extends Component {
 
   handleDetailsToggle(film){
     console.log(`Fetching details for ${film}`);
+    this.setState({current: film})
   }
 
   render() {
     const {films, faves, current} = this.state
     return (
       <main className="film-library">
-          <FilmList films={films} faves={faves} onFaveToggle={this.handleFaveToggle}/>
+          <FilmList films={films} faves={faves} onFaveToggle={this.handleFaveToggle} onDetailsToggle={this.handleDetailsToggle}/>
 
           <FilmDetails film={current}/>
       </main>
