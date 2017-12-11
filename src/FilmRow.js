@@ -6,7 +6,9 @@ class FilmRow extends Component {
 
   handleDetailsClick(film){
     console.log(`Fetching details for ${film.title}`);
+    // this.props.onDetailsToggle();
   }
+
   render() {
     const {onFaveToggle, isFave, film} = this.props
     return (

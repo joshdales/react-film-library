@@ -7,6 +7,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.handleFaveToggle = this.handleFaveToggle.bind(this);
+    this.handleDetailsToggle = this.handleDetailsToggle.bind(this);
     this.state = {
       films: TMDB.films,
       faves: [],
@@ -30,6 +31,10 @@ class App extends Component {
     }
 
     this.setState({faves});
+  }
+
+  handleDetailsToggle(film){
+    console.log(`Fetching details for ${film}`);
   }
 
   render() {
