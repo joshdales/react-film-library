@@ -17,13 +17,14 @@ class FilmList extends Component {
 
   render() {
     const {filter} = this.state
-    const {onFaveToggle, faves, films} = this.props
+    const {films, faves, onFaveToggle, onDetailsToggle} = this.props
     const filmRows = this.props.films.map(film =>
       <FilmRow
         key={film.id}
         film={film}
         onFaveToggle={() => onFaveToggle(film)}
-        isFave={faves.includes(film)}/>
+        isFave={faves.includes(film)}
+        onDetailsToggle={() => onDetailsToggle(film)}/>
     )
     return (
       <section className="film-list">

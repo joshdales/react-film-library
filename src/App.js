@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   handleDetailsToggle(film){
-    console.log(`Fetching details for ${film}`);
+    console.log(`Fetching details for ${film.title}`);
     this.setState({current: film})
   }
 
