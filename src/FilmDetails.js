@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 
 class FilmDetails extends Component {
   render() {
-    // const backdropUrl = `https://image.tmdb.org/t/p/w1280/${props.film.current.backdrop_path}`
-    // const posterUrl = `https://image.tmdb.org/t/p/w780/${props.film.current.poster_path}`
+    let {details} = this.props
+    // const backdropUrl = `https://image.tmdb.org/t/p/w1280/${details.current.backdrop_path}`
+    // const posterUrl = `https://image.tmdb.org/t/p/w780/${details.current.poster_path}`
 
     return (
       <section className="film-details">

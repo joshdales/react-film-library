@@ -47,7 +47,7 @@ class App extends Component {
       <main className="film-library">
           <FilmList films={films} faves={faves} onFaveToggle={this.handleFaveToggle} onDetailsToggle={this.handleDetailsToggle}/>
 
-          <FilmDetails film={current}/>
+          <FilmDetails details={current}/>
       </main>
     );
   }
