@@ -17,8 +17,9 @@ class FilmList extends Component {
 
   render() {
     const {filter} = this.state
-    const {films, faves, onFaveToggle, onDetailsToggle} = this.props
-    const filmRows = this.props.films.map(film =>
+    const {faves, onFaveToggle, onDetailsToggle} = this.props
+    const films = (this.state.filter === 'all') ? this.props.films : this.props.faves;
+    const filmRows = films.map(film =>
       <FilmRow
         key={film.id}
         film={film}
