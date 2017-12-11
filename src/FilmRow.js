@@ -4,22 +4,18 @@ import Fave from './Fave';
 
 class FilmRow extends Component {
 
-  handleDetailsClick(film){
-    this.props.onDetailsToggle();
-  }
-
   render() {
-    const {film, onFaveToggle, isFave} = this.props
+    const {film, onFaveToggle, isFave, onDetailsToggle} = this.props
     return (
-          <div className="film-row" onClick={() => this.handleDetailsClick(film)}>
-            <FilmPoster film={film}/>
+      <div className="film-row" onClick={() => onDetailsToggle(film)}>
+        <FilmPoster film={film}/>
 
-            <figcaption className="film-summary">
-              <h1>{film.title}</h1>
-              <p>{film.release_date}</p>
-              <Fave onFaveToggle={onFaveToggle} isFave={isFave}/>
-            </figcaption>
-          </div>
+        <figcaption className="film-summary">
+          <h1>{film.title}</h1>
+          <p>{film.release_date}</p>
+          <Fave onFaveToggle={onFaveToggle} isFave={isFave}/>
+        </figcaption>
+      </div>
     );
   }
 }
