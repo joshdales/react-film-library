@@ -6,7 +6,7 @@ import TMDB from './TMDB';
 class App extends Component {
   constructor(props){
     super(props);
-    this.handleFaveClick = this.handleFaveClick.bind(this);
+    this.handleFaveToggle = this.handleFaveToggle.bind(this);
     this.state = {
       films: TMDB.films,
       faves: [],
@@ -16,7 +16,7 @@ class App extends Component {
 
   handleFaveToggle(film) {
     console.log(film);
-    const faves = this.setState.faves.slice();
+    const faves = this.state.faves.slice();
     console.log(faves);
     const filmIndex = faves.indexOf(film);
     console.log(filmIndex);
@@ -36,7 +36,7 @@ class App extends Component {
     const {films, faves, current} = this.state
     return (
       <main className="film-library">
-          <FilmList films={films} faves={faves} onFaveToggle={handleFaveToggle}/>
+          <FilmList films={films} faves={faves} onFaveToggle={this.handleFaveToggle}/>
 
           <FilmDetails film={current}/>
       </main>

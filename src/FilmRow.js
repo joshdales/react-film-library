@@ -8,6 +8,7 @@ class FilmRow extends Component {
     console.log(`Fetching details for ${film.title}`);
   }
   render() {
+    const {onFaveToggle} = this.props
     return (
           <div className="film-row" onClick={() => this.handleDetailsClick(this.props.film)}>
             <FilmPoster film={this.props.film}/>
@@ -15,7 +16,7 @@ class FilmRow extends Component {
             <figcaption className="film-summary">
               <h1>{this.props.film.title}</h1>
               <p>{this.props.film.release_date }</p>
-              <Fave/>
+              <Fave onFaveToggle={onFaveToggle}/>
             </figcaption>
           </div>
     );

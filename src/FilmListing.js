@@ -17,6 +17,10 @@ class FilmList extends Component {
 
   render() {
     const {filter} = this.state
+    const {onFaveToggle} = this.props
+    const filmRows = this.props.films.map(film =>
+      <FilmRow key={film.id} film={film} onFaveToggle={() => onFaveToggle(film)}/>
+    )
     return (
       <section className="film-list">
         <h1 className="section-title">FILMS</h1>
@@ -31,9 +35,8 @@ class FilmList extends Component {
           </div>
         </div>
 
-        {this.props.films.map(film =>
-          <FilmRow key={film.id} film={film}/>
-        )}
+        {filmRows}
+
       </section>
     );
   }
