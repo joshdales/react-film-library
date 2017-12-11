@@ -16,10 +16,16 @@ class App extends Component {
 
   handleFaveClick(film) {
     console.log(film);
-    const faves = this.setState.films.slice(film);
+    const faves = this.setState.faves.slice();
     console.log(faves);
-    const filmIndex = this.state.films.indexOf(film);
+    const filmIndex = faves.indexOf(film);
     console.log(filmIndex);
+
+    if (filmIndex > -1) {
+      console.log(`Removing ${film.title} from FAVES`);
+    } else {
+      console.log(`Adding ${film.title} to FAVES`);
+    }
   }
 
   render() {
