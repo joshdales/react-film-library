@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
 
-  handleFaveClick(film) {
+  handleFaveToggle(film) {
     console.log(film);
     const faves = this.setState.faves.slice();
     console.log(faves);
@@ -28,6 +28,8 @@ class App extends Component {
       console.log(`Adding ${film.title} to FAVES`);
       faves.push(film);
     }
+
+    this.setState({faves});
   }
 
   render() {
