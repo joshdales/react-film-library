@@ -36,7 +36,7 @@ class App extends Component {
     const {films, faves, current} = this.state
     return (
       <main className="film-library">
-          <FilmList films={films} faves={faves}/>
+          <FilmList films={films} faves={faves} onFaveToggle={handleFaveToggle}/>
 
           <FilmDetails film={current}/>
       </main>
