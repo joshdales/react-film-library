@@ -23,8 +23,10 @@ class App extends Component {
 
     if (filmIndex > -1) {
       console.log(`Removing ${film.title} from FAVES`);
+      faves.splice(filmIndex, 1);
     } else {
       console.log(`Adding ${film.title} to FAVES`);
+      faves.push(film);
     }
   }
 
