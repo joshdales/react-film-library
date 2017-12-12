@@ -12,7 +12,7 @@ class FilmRow extends Component {
 
         <figcaption className="film-summary">
           <h1>{film.title}</h1>
-          <p>{film.release_date}</p>
+          <p>{new Date(film.release_date).getFullYear()}</p>
           <Fave onFaveToggle={onFaveToggle} isFave={isFave}/>
         </figcaption>
       </div>
